@@ -1,0 +1,19 @@
+{
+    "ahfront": {
+        "awscloudformation": {
+            "AuthRoleName": "angelhackfrontend-ahfront-20190706183317-authRole",
+            "UnauthRoleArn": "arn:aws:iam::659658108459:role/angelhackfrontend-ahfront-20190706183317-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::659658108459:role/angelhackfrontend-ahfront-20190706183317-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "angelhackfrontend-ahfront-20190706183317-deployment",
+            "UnauthRoleName": "angelhackfrontend-ahfront-20190706183317-unauthRole",
+            "StackName": "angelhackfrontend-ahfront-20190706183317",
+            "StackId": "arn:aws:cloudformation:us-east-1:659658108459:stack/angelhackfrontend-ahfront-20190706183317/0c986040-a03e-11e9-8a12-0a3a983b5e88"
+        },
+        "categories": {
+            "auth": {
+                "angelhackfrontend6a1e2a96": {}
+            }
+        }
+    }
+}

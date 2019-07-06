@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"angelhackfrontend6a1e2a96": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
