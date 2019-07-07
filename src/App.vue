@@ -34,7 +34,12 @@ export default {
 <style>
 body {
   margin: 0;
-  background-color: white;
+  background-color: #e5e3e3;
+  background-image: url("../static/background2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -128,8 +133,8 @@ inputRow {
   margin-bottom: 1em;
   display: flex;
   justify-content: space-between;
-  background-color: #2196F3;
-  color: #fff;
+  background-color: rgb(197, 197, 197, 0.6);
+  color: #0a065d;
   padding: 1em;
 }
 .item {
@@ -156,6 +161,18 @@ inputRow {
 
 .avatar-pic {
   max-height: 100px;
+}
+
+.logo{
+  max-height: 150px;
+}
+
+.extended-logo{
+  max-height: 30px;
+}
+
+.letters-logo{
+  max-height: 150px;
 }
 
 /* accordion */
