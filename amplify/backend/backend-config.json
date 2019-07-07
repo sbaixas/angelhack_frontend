@@ -4,5 +4,22 @@
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
-	}
+	},
+	"function": {
+		"docs": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "angelhackfrontend6a1e2a96",
+					"attributes": [
+						"UserPoolId"
+					]
+				}
+			]
+		}
+	},
+	"api": {}
 }

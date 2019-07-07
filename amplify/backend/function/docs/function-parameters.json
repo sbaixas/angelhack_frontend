@@ -1,0 +1,12 @@
+{
+    "permissions": {
+        "auth": {
+            "angelhackfrontend6a1e2a96": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

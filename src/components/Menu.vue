@@ -14,11 +14,13 @@
 <template>
   <div class="nav">
     <div class="main">
-      <a class="item" v-on:click="home">
+      <a class="brand" v-on:click="home">
         <img src="static/extended_logo.png" class="extended-logo">
       </a>
     </div>
-    <a class="item" v-on:click="profile" v-if="user">Profile</a>
+    <div class="right">
+      <a class="item" v-on:click="profile" v-if="user">Profile</a>
+    </div>
     <div class="right">
       <amplify-sign-out v-if="user"></amplify-sign-out>
     </div>

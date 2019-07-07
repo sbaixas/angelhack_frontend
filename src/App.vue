@@ -62,7 +62,8 @@ h5 {
 }
 .container {
   text-align: center;
-  margin-left: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .shifted {
   text-align: left;
@@ -137,10 +138,21 @@ inputRow {
   color: #0a065d;
   padding: 1em;
 }
+.brand {
+  font-weight: 500;
+  padding-right: 30px;
+  padding-top: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  display: block;
+}
 .item {
   font-weight: 500;
-  padding: 0 0.5em;
+  padding-right: 30px;
+  padding-top: 30px;
   cursor: pointer;
+  vertical-align: middle;
+  display: block;
 }
 .nav > .greeting {
   font-weight: 500;
@@ -162,7 +174,10 @@ inputRow {
 .avatar-pic {
   max-height: 100px;
 }
-
+.main-logo{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 .logo{
   max-height: 150px;
 }
