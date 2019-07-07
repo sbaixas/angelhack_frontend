@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/auth/angelhackfrontend6a1e2a96-cloudformation-template.yml",
 				"logicalId": "authangelhackfrontend6a1e2a96"
 			},
-			"lastPushTimeStamp": "2019-07-07T08:11:08.674Z",
+			"lastPushTimeStamp": "2019-07-07T15:36:11.317Z",
 			"output": {
 				"AppClientSecret": "hvlj1235arstldq0rquia2igcnbba37fus8831jh9o6m3o9dd33",
 				"UserPoolId": "us-east-1_CHS3LWKTj",
@@ -29,96 +29,98 @@
 				"IdentityPoolName": "angelhackfrontend6a1e2a96_identitypool_6a1e2a96__ahfront",
 				"UserPoolName": "angelhackfrontend6a1e2a96_userpool_6a1e2a96"
 			},
-			"lastPushDirHash": "GSbDGTjX5YVRYhxg0fKuWN9v1IE="
+			"lastPushDirHash": "wpgmlcs8d9zD7M30nTDXOGDF3Z4="
 		}
 	},
 	"function": {
-		"docs": {
+		"getDocs": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true,
 			"dependsOn": [
 				{
+					"category": "storage",
+					"resourceName": "documents",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				},
+				{
 					"category": "auth",
 					"resourceName": "angelhackfrontend6a1e2a96",
 					"attributes": [
 						"UserPoolId"
+					]
+				},
+				{
+					"category": "storage",
+					"resourceName": "documents",
+					"attributes": [
+						"Name",
+						"Arn"
 					]
 				}
 			],
-			"lastBuildTimeStamp": "2019-07-07T08:09:59.559Z",
-			"lastPackageTimeStamp": "2019-07-07T08:10:01.075Z",
-			"distZipFilename": "docs-387753454c52356e6745-build.zip",
+			"lastBuildTimeStamp": "2019-07-07T13:11:58.765Z",
+			"lastPackageTimeStamp": "2019-07-07T15:07:21.993Z",
+			"distZipFilename": "getDocs-676c68636d48386f4549-build.zip",
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/function/docs-cloudformation-template.json",
-				"logicalId": "functiondocs"
+				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/function/getDocs-cloudformation-template.json",
+				"logicalId": "functiongetDocs"
 			},
-			"lastPushTimeStamp": "2019-07-07T08:11:08.676Z",
+			"lastPushTimeStamp": "2019-07-07T15:36:11.318Z",
 			"output": {
 				"Region": "us-east-1",
-				"Arn": "arn:aws:lambda:us-east-1:659658108459:function:docs-ahfront",
-				"Name": "docs-ahfront"
+				"Arn": "arn:aws:lambda:us-east-1:659658108459:function:getDocs-ahfront",
+				"Name": "getDocs-ahfront"
 			},
-			"lastPushDirHash": "hDgWDCVM/jnWit94GajP1dC1wKM="
-		},
-		"getDocuments": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "storage",
-					"resourceName": "documents",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				},
-				{
-					"category": "auth",
-					"resourceName": "angelhackfrontend6a1e2a96",
-					"attributes": [
-						"UserPoolId"
-					]
-				},
-				{
-					"category": "function",
-					"resourceName": "docs",
-					"attributes": [
-						"Name"
-					]
-				},
-				{
-					"category": "storage",
-					"resourceName": "documents",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			]
+			"lastPushDirHash": "S/68aXNihfyndxEfseIiS72zn4Y="
 		}
 	},
 	"api": {
-		"document": {
+		"documents": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "getDocuments",
+					"resourceName": "getDocs",
 					"attributes": [
 						"Name",
 						"Arn"
 					]
 				}
-			]
+			],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/api/documents-cloudformation-template.json",
+				"logicalId": "apidocuments"
+			},
+			"lastPushTimeStamp": "2019-07-07T15:36:11.321Z",
+			"output": {
+				"ApiName": "documents",
+				"RootUrl": "https://rhjgngvuo3.execute-api.us-east-1.amazonaws.com/ahfront"
+			},
+			"lastPushDirHash": "ATkSrGe6KTMUhk7o1RhhwkmlBFw="
 		}
 	},
 	"storage": {
 		"documents": {
 			"service": "DynamoDB",
-			"providerPlugin": "awscloudformation"
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/storage/documents-cloudformation-template.json",
+				"logicalId": "storagedocuments"
+			},
+			"lastPushTimeStamp": "2019-07-07T15:36:11.320Z",
+			"output": {
+				"PartitionKeyName": "id",
+				"Region": "us-east-1",
+				"Arn": "arn:aws:dynamodb:us-east-1:659658108459:table/documents-ahfront",
+				"PartitionKeyType": "S",
+				"Name": "documents-ahfront"
+			},
+			"lastPushDirHash": "ucO2L+DHs0djHiIMlSmppA1D7OA="
 		}
 	}
 }

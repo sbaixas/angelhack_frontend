@@ -28,6 +28,8 @@
 
 <script>
 import * as AmplifyUI from '@aws-amplify/ui';
+import { API } from 'aws-amplify'
+
 export default {
   name: 'Home',
   data () {
@@ -41,7 +43,13 @@ export default {
   },
   methods:{
     handleClick(event){
-      console.log('Search text:', this.search)
+      this.getItems();
+    },
+    getItems: async () => {
+      let myInit = {
+          body: {}
+      };
+      console.log('Search text:', await API.get('documents', '/items', myInit));
     }
   }
 }

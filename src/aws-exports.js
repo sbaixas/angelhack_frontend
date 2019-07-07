@@ -6,7 +6,21 @@ const awsmobile = {
     "aws_cognito_region": "us-east-1",
     "aws_user_pools_id": "us-east-1_CHS3LWKTj",
     "aws_user_pools_web_client_id": "73g03n4em6jte6j3sn40e8of1m",
-    "oauth": {}
+    "oauth": {},
+    "aws_cloud_logic_custom": [
+        {
+            "name": "documents",
+            "endpoint": "https://rhjgngvuo3.execute-api.us-east-1.amazonaws.com/ahfront",
+            "region": "us-east-1"
+        }
+    ],
+    "aws_dynamodb_all_tables_region": "us-east-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "documents-ahfront",
+            "region": "us-east-1"
+        }
+    ]
 };
 
 
