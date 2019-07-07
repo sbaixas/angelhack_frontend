@@ -1,0 +1,66 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "angelhackfrontend-ahfront-20190706183317-authRole",
+			"UnauthRoleArn": "arn:aws:iam::659658108459:role/angelhackfrontend-ahfront-20190706183317-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::659658108459:role/angelhackfrontend-ahfront-20190706183317-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "angelhackfrontend-ahfront-20190706183317-deployment",
+			"UnauthRoleName": "angelhackfrontend-ahfront-20190706183317-unauthRole",
+			"StackName": "angelhackfrontend-ahfront-20190706183317",
+			"StackId": "arn:aws:cloudformation:us-east-1:659658108459:stack/angelhackfrontend-ahfront-20190706183317/0c986040-a03e-11e9-8a12-0a3a983b5e88"
+		}
+	},
+	"auth": {
+		"angelhackfrontend6a1e2a96": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/auth/angelhackfrontend6a1e2a96-cloudformation-template.yml",
+				"logicalId": "authangelhackfrontend6a1e2a96"
+			},
+			"lastPushTimeStamp": "2019-07-07T08:11:08.674Z",
+			"output": {
+				"AppClientSecret": "hvlj1235arstldq0rquia2igcnbba37fus8831jh9o6m3o9dd33",
+				"UserPoolId": "us-east-1_CHS3LWKTj",
+				"AppClientIDWeb": "73g03n4em6jte6j3sn40e8of1m",
+				"AppClientID": "72jqjq68jgbs93u2edbeq32ljo",
+				"IdentityPoolId": "us-east-1:9d67e93b-c0a6-4f69-bb7d-282fc03b5761",
+				"IdentityPoolName": "angelhackfrontend6a1e2a96_identitypool_6a1e2a96__ahfront",
+				"UserPoolName": "angelhackfrontend6a1e2a96_userpool_6a1e2a96"
+			},
+			"lastPushDirHash": "GSbDGTjX5YVRYhxg0fKuWN9v1IE="
+		}
+	},
+	"function": {
+		"docs": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "angelhackfrontend6a1e2a96",
+					"attributes": [
+						"UserPoolId"
+					]
+				}
+			],
+			"lastBuildTimeStamp": "2019-07-07T08:09:59.559Z",
+			"lastPackageTimeStamp": "2019-07-07T08:10:01.075Z",
+			"distZipFilename": "docs-387753454c52356e6745-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/angelhackfrontend-ahfront-20190706183317-deployment/amplify-cfn-templates/function/docs-cloudformation-template.json",
+				"logicalId": "functiondocs"
+			},
+			"lastPushTimeStamp": "2019-07-07T08:11:08.676Z",
+			"output": {
+				"Region": "us-east-1",
+				"Arn": "arn:aws:lambda:us-east-1:659658108459:function:docs-ahfront",
+				"Name": "docs-ahfront"
+			},
+			"lastPushDirHash": "hDgWDCVM/jnWit94GajP1dC1wKM="
+		}
+	},
+	"api": {}
+}
